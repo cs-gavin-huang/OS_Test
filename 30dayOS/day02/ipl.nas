@@ -34,7 +34,6 @@ entry:
 		MOV		SP,0x7c00
 		MOV		DS,AX
 		MOV		ES,AX
-
 		MOV		SI,msg
 putloop:
 		MOV		AL,[SI]
@@ -48,7 +47,6 @@ putloop:
 fin:
 		HLT						; 让CPU停止，等待指令
 		JMP		fin				; 无限循环
-
 msg:
 		DB		0x0a, 0x0a		; 换行两次
 		DB		"hello, world"
